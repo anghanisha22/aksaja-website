@@ -1,0 +1,21 @@
+---
+layout: default
+---
+{% assign sorted_sections = site.sections | sort: 'path' %}
+{% for section in sorted_sections %}
+  {% if section.type == 'hero' %}
+    {% include hero.html section=section %}
+  {% elsif section.type == 'stats' %}
+    {% include stats.html section=section %}
+  {% elsif section.type == 'collections' %}
+    {% include collections.html section=section %}
+  {% elsif section.type == 'process' %}
+    {% include process.html section=section %}
+  {% elsif section.type == 'testimonials' %}
+    {% include testimonials.html section=section %}
+  {% elsif section.type == 'custom_form' %}
+    {% include custom_form.html section=section %}
+  {% elsif section.type == 'instagram' %}
+    {% include instagram.html section=section %}
+  {% endif %}
+{% endfor %}

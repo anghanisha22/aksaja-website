@@ -1,0 +1,17 @@
+<section id="collections">
+  <div class="section-tag">{{ include.section.tag }}</div>
+  <h2 class="section-title">{{ include.section.title_main }} <em>{{ include.section.title_italic }}</em></h2>
+  <p class="section-body">{{ include.section.body }}</p>
+  <div class="categories-grid">
+    {% for item in include.section.items %}
+    <a class="cat-card" href="#custom">
+      <div class="cat-card-bg">{{ item.icon }}</div>
+      <div class="cat-info">
+        <div class="cat-tag">{{ item.tag }}</div>
+        <div class="cat-name">{{ item.name }}</div>
+        <div class="cat-desc">{{ item.desc }}</div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>

@@ -1,0 +1,9 @@
+<div class="insta-strip">
+  <div class="insta-handle">{{ include.section.handle }}</div>
+  <div class="insta-cta">{{ include.section.cta }}</div>
+  <div class="insta-grid">
+    {% for symbol in include.section.symbols %}
+    <div class="insta-cell">{{ symbol }}</div>
+    {% endfor %}
+  </div>
+</div>

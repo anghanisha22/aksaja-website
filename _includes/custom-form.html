@@ -1,0 +1,21 @@
+<section class="form-section" id="custom">
+  <div class="form-layout">
+    <div class="form-intro">
+      <div class="section-tag">{{ include.section.tag }}</div>
+      <h2 class="section-title">{{ include.section.title_main }} <em>{{ include.section.title_italic }}</em></h2>
+      <p class="section-body">{{ include.section.body }}</p>
+      <div class="form-features">
+        {% for feature in include.section.features %}
+        <div class="form-feature">
+          <div class="feature-dot"></div>
+          <div class="feature-text">{{ feature }}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    
+    <form class="custom-form" id="contactForm" onsubmit="handleSubmit(event)">
+      <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+      </form>
+  </div>
+</section>
