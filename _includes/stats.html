@@ -1,0 +1,8 @@
+<div class="stats-bar">
+  {% for stat in include.section.items %}
+  <div class="stat">
+    <div class="stat-number">{{ stat.number }}</div>
+    <div class="stat-label">{{ stat.label }}</div>
+  </div>
+  {% endfor %}
+</div>
